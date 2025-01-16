@@ -17,7 +17,6 @@ To this end, we developed GroverGPT, a specialized model based on LLaMA’s 8-bi
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [License](#license)
 
 ## Installation
