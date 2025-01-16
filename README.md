@@ -1,101 +1,41 @@
-# Scientific AI Implementations
+# GroverGPT
+GroverGPT is a cutting-edge AI model that combines the strengths of Grover and GPT architectures to generate highly accurate and coherent text for various applications such as natural language understanding, content creation, and more.
 
-A comprehensive repository of cutting-edge AI solutions tailored for scientific research and applications.
+## Features
 
-## Overview
+- **State-of-the-Art Performance**: Leverages the latest advancements in language modeling.
+- **Customizable**: Fine-tune the model for specific tasks.
+- **Scalable**: Efficient implementation for both small-scale and large-scale projects.
+- **Open Source**: Fully accessible for research and development.
 
-This repository serves as a hub for implementing advanced Artificial Intelligence (AI) techniques in diverse scientific domains. It provides ready-to-use tools, frameworks, and examples to accelerate research and practical problem-solving across fields like physics, biology, chemistry, and engineering.
+## Abstract (from paper directly)
 
-## Key Features
+Quantum computing is an exciting non-Von Neumann paradigm, offering provable speedups over classical computing for specific problems. However, the practical limits of classical simulatability for quantum circuits remain unclear, especially with current noisy quantum devices. In this work, we explore the potential of leveraging Large Language Models (LLMs) to simulate the output of a quantum Turing machine using Grover’s quantum circuits, known to provide quadratic speedups over classical counterparts.
 
-- **Domain-Specific Models**
-    - Pretrained models and architectures optimized for various scientific tasks.
-    - Customizable frameworks to adapt AI tools to specific research needs.
+To this end, we developed GroverGPT, a specialized model based on LLaMA’s 8-billion-parameter architecture, trained on over 15 trillion tokens. Unlike brute-force state-vector simulations, which demand substantial computational resources, GroverGPT employs pattern recognition to approximate quantum search algorithms without explicitly representing quantum states. Analyzing 97K quantum search instances, GroverGPT consistently outperformed OpenAI’s GPT-4o (45% accuracy), achieving nearly 100% accuracy on 6- and 10-qubit datasets when trained on 4-qubit or larger datasets. It also demonstrated strong generalization, surpassing 95% accuracy for systems with over 20 qubits when trained on 3- to 6-qubit data. Analysis indicates GroverGPT captures quantum features of Grover’s search rather than classical patterns, supported by novel prompting strategies to enhance performance. Although accuracy declines with increasing system size, these findings offer insights into the practical boundaries of classical simulatability. This work suggests task-specific LLMs can surpass general-purpose models like GPT-4o in quantum algorithm learning and serve as powerful tools for advancing quantum research.
 
-- **Data Processing Pipelines**
-    - End-to-end pipelines for processing scientific datasets.
-    - Integration with common formats and domain-specific data types.
+## Table of Contents
 
-- **Visualization Tools**
-    - Interactive visualizations for understanding AI-driven insights.
-    - Graphs, 3D plots, and heatmaps for data and model outputs.
-
-- **Efficient Training Frameworks**
-    - Optimized training scripts for large datasets and complex models.
-    - Support for multi-GPU and distributed computing environments.
-
-## Applications
-
-This repository is designed for applications across various scientific disciplines, including but not limited to:
-
-- **Physics:** Simulating particle interactions, modeling complex systems, and solving differential equations.
-- **Biology:** Protein structure prediction, genomics analysis, and drug discovery.
-- **Chemistry:** Reaction modeling, material discovery, and molecular simulations.
-- **Engineering:** Design optimization, fault detection, and predictive maintenance.
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
 ## Installation
 
-### Prerequisites
-
-- Python 3.8 or later
-- Recommended packages:
+Clone this repository and install the required dependencies:
 
 ```bash
-pip install numpy scipy matplotlib pandas scikit-learn torch torchvision
-```
-
-### Clone the Repository
-
-```bash
+# Clone the repository
 git clone https://github.com/dreamboat26/fuzzy.git
-```
-
-### Setup
-
-Follow the instructions in the `setup.py` file to configure the environment and dependencies specific to your system.
-
-## Usage
-
-1. **Select a Module:** Choose a scientific domain or task from the `modules/` directory.
-2. **Prepare Data:** Place your data in the required format as specified in the module documentation.
-3. **Run the Scripts:**
-
-```bash
-python run_module.py --module <module_name> --config <config_file>
-```
-
-4. **Analyze Outputs:** Explore results in the `outputs/` directory, including logs, metrics, and visualizations.
-
-## Contribution Guidelines
-
-We welcome contributions to expand and enhance this repository. To contribute:
-
-1. Fork the repository.
-2. Create a feature branch:
-
-```bash
-git checkout -b feature-name
-```
-
-3. Commit your changes and push to your fork.
-4. Submit a pull request describing your additions.
-
-## Roadmap
-
-- Expand support for additional scientific domains.
-- Integrate more pretrained models.
-- Develop a web-based interface for deploying models interactively.
-- Improve support for real-time data processing.
+cd GroverGPT
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-Special thanks to researchers and contributors in the scientific AI community for their invaluable insights and innovations.
+GroverGPT was inspired by:
 
-## Contact
-
-For questions, collaborations, or suggestions, please open an issue or reach out via the repository's discussion board.
-
+- [Grover](https://arxiv.org/abs/1905.12616)
+- [GPT](https://openai.com/research/gpt)
