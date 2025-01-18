@@ -4,7 +4,7 @@ This work demonstrates the application of **Parameter Efficient Fine-Tuning (PEF
 
 ## Project Overview
 
-The goal of this project is to fine-tune a pretrained transformer model (`SmolLM2-1.7B`) on a set of spatial reasoning prompts. These prompts involve determining the positioning of elements inside certain boundaries. PEFT with LoRA is used to adapt the model efficiently without the need to fine-tune the entire model.
+The goal of this work is to fine-tune a pretrained transformer model (`SmolLM2-1.7B`) on a set of spatial reasoning prompts. These prompts involve determining the positioning of elements inside certain boundaries. PEFT with LoRA is used to adapt the model efficiently without the need to fine-tune the entire model.
 
 ## Key Features
 
