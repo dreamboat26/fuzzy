@@ -1,5 +1,7 @@
 # Redox Reaction-Based Workload Balancing for Optimization Problems
 
+https://github.com/user-attachments/assets/190e2a7a-3d5b-48eb-981f-e09f65763b8a
+
 This repository explores the application of Redox reactions as a novel approach to workload balancing in optimization problems. The goal is to adapt the chemical concept of Redox reactions to optimize the distribution of tasks, improving system efficiency and performance in computational models.
 
 ## Concept Overview
@@ -10,7 +12,7 @@ Redox (reduction-oxidation) reactions are a fundamental concept in chemistry, in
 - **Reduction:** Represents reducing the workload on overburdened tasks or processors.
 - **Oxidation:** Represents increasing the workload on underutilized tasks or processors.
   
-By applying this idea, we aim to create a system where resources (processors, workers, etc.) are dynamically adjusted based on workload distribution, similar to how Redox reactions balance energy between reactants.
+By applying this idea, I aim to create a system where resources (processors, workers, etc.) are dynamically adjusted based on workload distribution, similar to how Redox reactions balance energy between reactants.
 
 ## Approach
 
@@ -31,7 +33,7 @@ This approach can be extended to more complex optimization problems, including m
 
 ## Conclusion
 
-By leveraging the principles of Redox reactions, we introduce a new paradigm for solving workload balancing problems. The dynamic and adaptive nature of this approach has the potential to improve the efficiency and scalability of computational systems.
+By leveraging the principles of Redox reactions, I hope to introduce a new paradigm for solving workload balancing problems. The dynamic and adaptive nature of this approach has the potential to improve the efficiency and scalability of computational systems.
 
 ---
 
