@@ -1,6 +1,6 @@
 # PEFT Spatial Reasoning Model
 
-This project demonstrates the application of **Parameter Efficient Fine-Tuning (PEFT)** using **LoRA (Low-Rank Adaptation)** to fine-tune a transformer model for **spatial reasoning tasks**.
+This work demonstrates the application of **Parameter Efficient Fine-Tuning (PEFT)** using **LoRA (Low-Rank Adaptation)** to fine-tune a transformer model for **spatial reasoning tasks**.
 
 ## Project Overview
 
