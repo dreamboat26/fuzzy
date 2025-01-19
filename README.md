@@ -1,101 +1,92 @@
-# Scientific AI Implementations
-
-A comprehensive repository of cutting-edge AI solutions tailored for scientific research and applications.
+# HyperbolicChessTrainer
+Auto trains LLM models to play chess by having them simulate the game board in hyperbolic space
+# Hyperbolic Chess Trainer
 
 ## Overview
 
-This repository serves as a hub for implementing advanced Artificial Intelligence (AI) techniques in diverse scientific domains. It provides ready-to-use tools, frameworks, and examples to accelerate research and practical problem-solving across fields like physics, biology, chemistry, and engineering.
+**Hyperbolic Chess Trainer** is an experimental AI-driven chess playing and training tool. It utilizes hyperbolic geometry-inspired embeddings and neural networks to evaluate chessboard states, make intelligent moves, and store past games for improving decision-making. The project is released under the MIT license, promoting open collaboration and usage.
 
-## Key Features
+## Features
 
-- **Domain-Specific Models**
-    - Pretrained models and architectures optimized for various scientific tasks.
-    - Customizable frameworks to adapt AI tools to specific research needs.
+- **Hyperbolic Embeddings**: Encodes chessboard states using hyperbolic transformations for efficient and insightful move evaluations.
+- **Memory Module**: A custom memory system retrieves historically relevant board states based on hyperbolic similarity metrics.
+- **Language Model Integration**: Leverages a transformer-based language model to generate moves and interpret game contexts.
+- **Chess Gameplay**: Plays full chess games with up to 100 moves, adhering to legal game rules and maintaining a rich memory of past moves.
+- **Customizability**: Adjustable memory size, embedding dimensions, and model checkpoints to suit different computational needs.
 
-- **Data Processing Pipelines**
-    - End-to-end pipelines for processing scientific datasets.
-    - Integration with common formats and domain-specific data types.
+## Prerequisites
 
-- **Visualization Tools**
-    - Interactive visualizations for understanding AI-driven insights.
-    - Graphs, 3D plots, and heatmaps for data and model outputs.
-
-- **Efficient Training Frameworks**
-    - Optimized training scripts for large datasets and complex models.
-    - Support for multi-GPU and distributed computing environments.
-
-## Applications
-
-This repository is designed for applications across various scientific disciplines, including but not limited to:
-
-- **Physics:** Simulating particle interactions, modeling complex systems, and solving differential equations.
-- **Biology:** Protein structure prediction, genomics analysis, and drug discovery.
-- **Chemistry:** Reaction modeling, material discovery, and molecular simulations.
-- **Engineering:** Design optimization, fault detection, and predictive maintenance.
+- Python 3.8+
+- PyTorch 1.9+ with CUDA (optional for GPU acceleration)
+- Required Python libraries:
+  - `torch`
+  - `numpy`
+  - `transformers`
+  - `python-chess`
 
 ## Installation
 
-### Prerequisites
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/RichardAragon/HyperbolicChessTrainer.git
+   cd HyperbolicChessTrainer
+   ```
 
-- Python 3.8 or later
-- Recommended packages:
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-pip install numpy scipy matplotlib pandas scikit-learn torch torchvision
-```
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/dreamboat26/fuzzy.git
-```
-
-### Setup
-
-Follow the instructions in the `setup.py` file to configure the environment and dependencies specific to your system.
+3. (Optional) Configure a GPU environment:
+   Ensure PyTorch with CUDA is installed for faster computations:
+   ```bash
+   pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
+   ```
 
 ## Usage
 
-1. **Select a Module:** Choose a scientific domain or task from the `modules/` directory.
-2. **Prepare Data:** Place your data in the required format as specified in the module documentation.
-3. **Run the Scripts:**
-
+Run the `main.py` script to initiate a chess game:
 ```bash
-python run_module.py --module <module_name> --config <config_file>
+python main.py
 ```
 
-4. **Analyze Outputs:** Explore results in the `outputs/` directory, including logs, metrics, and visualizations.
+The program initializes a chess agent using hyperbolic embeddings and a pre-trained language model. The agent will play a complete game of chess, logging moves and game progress.
 
-## Contribution Guidelines
+### Configuration
 
-We welcome contributions to expand and enhance this repository. To contribute:
+- **Model Checkpoint**: Adjust the pre-trained language model by modifying the `model_checkpoint` parameter in `main.py`.
+- **Device**: The script automatically detects and uses a GPU if available. To force a specific device, set the `device` parameter (`cpu` or `cuda`).
+- **Memory Size**: Customize the memory buffer size in the `HyperbolicChessMemory` class (`memory_size` argument).
+- **Embedding Dimensions**: Modify the `embedding_dim` argument in the `HyperbolicChessEmbedding` class to adjust embedding vector size.
 
-1. Fork the repository.
-2. Create a feature branch:
+## Project Structure
 
-```bash
-git checkout -b feature-name
-```
+- **`main.py`**: Entry point for running the chess agent.
+- **`HyperbolicChessAgent`**: Core class managing chess gameplay and AI decision-making.
+- **`HyperbolicChessMemory`**: Memory module for storing and retrieving hyperbolic embeddings of past board states.
+- **`HyperbolicChessEmbedding`**: Neural network for generating hyperbolic embeddings from board states.
 
-3. Commit your changes and push to your fork.
-4. Submit a pull request describing your additions.
+## Known Limitations
 
-## Roadmap
-
-- Expand support for additional scientific domains.
-- Integrate more pretrained models.
-- Develop a web-based interface for deploying models interactively.
-- Improve support for real-time data processing.
+- **Resource Intensive**: Large model checkpoints may require significant computational resources.
+- **Experimental Design**: The current implementation is a prototype; accuracy and performance can vary.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+Hyperbolic Chess Trainer is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contribution
+
+Contributions are welcome! If you'd like to report a bug, suggest a feature, or submit a pull request, please visit the [GitHub repository](https://github.com/yourusername/HyperbolicChessTrainer).
 
 ## Acknowledgments
 
-Special thanks to researchers and contributors in the scientific AI community for their invaluable insights and innovations.
+- **PyTorch** for the neural network framework.
+- **Transformers by Hugging Face** for the language model.
+- **python-chess** for chessboard representation and move validation.
 
-## Contact
+---
 
-For questions, collaborations, or suggestions, please open an issue or reach out via the repository's discussion board.
-
+**Happy Chess Training!** 🎮♟️
